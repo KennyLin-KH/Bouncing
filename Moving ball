@@ -1,0 +1,17 @@
+let ball;
+function setup() {
+  createCanvas(1000, 1000);
+  ball = {};
+  ball.x = 500;
+  ball.y = 500;
+  ball.d = 100;
+}
+function draw() {
+  background(220);
+  drawBall(ball.x,ball.y, ball.d);
+  ball.x = ball.x + random(-3,3);
+  ball.y = ball.y + random(-3,3);
+}
+function drawBall(x,y,d) {
+  circle (x,y,d);
+}
